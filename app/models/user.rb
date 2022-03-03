@@ -7,5 +7,3 @@ class User < ApplicationRecord
     posts.limit(3).order(created_at: :desc)
   end
 end
-
-
