@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @user = @post.user
     @comments = @post.comments
   end
+<<<<<<< HEAD
 
   def new
     @post = Post.new
@@ -35,4 +36,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
+=======
+>>>>>>> 460c3df2ec3017aaa34f9a13350383208bde6399
 end

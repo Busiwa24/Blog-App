@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'users#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'users#index'
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index create new show]
   end
