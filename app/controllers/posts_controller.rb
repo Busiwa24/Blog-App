@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
   end
 
   def show
@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     @user = @post.user
     @comments = @post.comments
   end
-<<<<<<< HEAD
 
   def new
     @post = Post.new
@@ -23,9 +22,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if @new_post.save
-          redirect_to "/users/#{@new_post.user.id}/posts/", notice: 'Success!'
+          redirect_to "/users/#{@new_post.user.id}/posts/", flash: { alert: 'Your post is saved' }
         else
-          render :new, alert: 'Error occured!'
+          flash.now[:error] = 'Could not save post'
+          render action: 'new'
         end
       end
     end
@@ -36,6 +36,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
-=======
->>>>>>> 460c3df2ec3017aaa34f9a13350383208bde6399
 end
