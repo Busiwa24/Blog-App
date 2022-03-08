@@ -122,4 +122,3 @@ like = Like.create(post: Post.find(7), author:User.find(1))
 like = Like.create(post: Post.find(10), author:User.find(4))
 like = Like.create(post: Post.find(11), author:User.find(5))
 like = Like.create(post: Post.find(12), author:User.find(6))
-
