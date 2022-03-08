@@ -2,27 +2,43 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    it 'should returns http 200 success' do
-      get users_path
-      expect(response).to have_http_status(200)
+    before(:each) do
+      @user = User.new(name: 'TestUser', posts_counter: 0)
+      @user.save
+      get '/users'
     end
 
-    it 'should include Number of posts' do
-      get users_path
-      expect(response.body).to include('Number of posts')
+    it 'renders correct placeholder text ' do
+      expect(response.body).to include('List of all users')
+    end
+
+    it 'renders correct template' do
+      expect(response).to render_template(:index)
+    end
+
+    it "'http request is successfull" do
+      expect(response).to have_http_status(:success)
     end
   end
-
+end
+RSpec.describe 'Users', type: :request do
   describe 'GET /show' do
-    user = User.create('name' => 'Amy', 'bio' => 'bio', 'photo' => 'Tom.png', 'posts_counter' => 0)
-    before(:each) { get user_path id: user.id }
-
-    it 'should return correct response' do
-      expect(response).to have_http_status(200)
+    before(:each) do
+      @user = User.new(name: 'TestUser', posts_counter: 0)
+      @user.save
+      get '/users/1'
     end
 
-    it 'should render the show template ' do
+    it 'renders correct placeholder text ' do
+      expect(response.body).to include(@user.name)
+    end
+
+    it 'renders correct template' do
       expect(response).to render_template(:show)
+    end
+
+    it "'http request is successfull" do
+      expect(response).to have_http_status(:success)
     end
   end
 end
