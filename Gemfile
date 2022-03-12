@@ -7,7 +7,7 @@ gem 'cancancan''
 
 
 gem 
-gem 'rails-controller-testing'
+gem 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
