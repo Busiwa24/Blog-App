@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.1.0'
 gem 'bootstrap', '~> 4.3.1'
-gem 'cancancan''
-
-
-gem 
-gem 
+gem 'cancancan'
+gem 'devise'
+gem 'ffi'
+gem 'jquery-rails'
+gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem  '~> 7.0.2', '>= 7.0.2.2'
+gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
