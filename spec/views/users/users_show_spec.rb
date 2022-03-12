@@ -67,6 +67,3 @@ RSpec.describe 'User #Show', type: :feature do
     end
   end
 end
-
-
-
