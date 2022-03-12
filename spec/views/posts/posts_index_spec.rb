@@ -75,5 +75,3 @@ RSpec.describe 'posts#index', type: :feature do
     end
   end
 end
-
-
