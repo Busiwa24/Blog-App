@@ -39,7 +39,3 @@ RSpec.describe 'Users Page' do
     end
   end
 end
-
-
-
-
