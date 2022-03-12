@@ -1,5 +1,4 @@
-<div class="col-sm-7 m-auto">
-<h2 class= "m-2 text-center">Change your password</h2>
+<h2>Change your password</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -19,9 +18,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password", class: "btn btn-outline-success my-4" %>
+    <%= f.submit "Change my password" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
-</div>
