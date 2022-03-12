@@ -41,3 +41,4 @@ RSpec.feature 'Logins', type: :feature do
   end
   # rubocop:enable Metrics/BlockLength
 end
+
