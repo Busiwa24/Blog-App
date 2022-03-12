@@ -6,7 +6,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'cancancan''
 
 
-gem 'jquery-rails'
+gem 
 gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
