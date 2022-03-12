@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'byebug', platforms: %i[mri mingw x64_mingw]
+gem 'database_cleaner'
+
 ruby '3.1.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'cancancan'
