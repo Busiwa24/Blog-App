@@ -69,5 +69,3 @@ RSpec.describe 'Post show', type: :feature do
     end
   end
 end
-
-
